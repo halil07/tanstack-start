@@ -1,5 +1,5 @@
 {
-	"name": "cloudflare-app",
+	"name": "tanstack-d1",
 	"private": true,
 	"type": "module",
 	"scripts": {
@@ -9,7 +9,11 @@
 		"test": "vitest run",
 		"deploy": "pnpm run build && wrangler deploy",
 		"preview": "pnpm run build && vite preview",
-		"cf-typegen": "wrangler types"
+		"cf-typegen": "wrangler types",
+		"db:generate": "drizzle-kit generate",
+		"db:migrate:local": "wrangler d1 migrations apply my-database --local",
+		"db:migrate:remote": "wrangler d1 migrations apply my-database --remote",
+		"db:studio": "drizzle-kit studio"
 	},
 	"dependencies": {
 		"@cloudflare/vite-plugin": "^1.13.8",
@@ -20,6 +24,7 @@
 		"@tanstack/react-router-ssr-query": "^1.131.7",
 		"@tanstack/react-start": "^1.132.0",
 		"@tanstack/router-plugin": "^1.132.0",
+		"drizzle-orm": "^0.45.1",
 		"lucide-react": "^0.544.0",
 		"react": "^19.2.0",
 		"react-dom": "^19.2.0",
@@ -34,11 +39,12 @@
 		"@types/react": "^19.2.0",
 		"@types/react-dom": "^19.2.0",
 		"@vitejs/plugin-react": "^5.0.4",
+		"drizzle-kit": "^0.31.8",
 		"jsdom": "^27.0.0",
 		"typescript": "^5.7.2",
 		"vite": "^7.1.7",
 		"vitest": "^3.0.5",
 		"web-vitals": "^5.1.0",
-		"wrangler": "^4.61.0"
+		"wrangler": "^4.59.2"
 	}
 }

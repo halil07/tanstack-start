@@ -1,5 +1,5 @@
 {
-  "projectName": "cloudflare-app",
+  "projectName": "tanstack-d1",
   "mode": "file-router",
   "typescript": true,
   "tailwind": true,
