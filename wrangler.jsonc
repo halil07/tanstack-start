@@ -5,7 +5,6 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "tanstack-start",
-	"account_id": "e47294a4cfb02c21f673410b87b93428",
 	"compatibility_date": "2025-09-02",
 	"compatibility_flags": [
 		"nodejs_compat"
